@@ -73,7 +73,7 @@
 
     // Creates multiple parent-child-related modules and adds them to
     // the namespace
-    Namespace.prototype.create = function (fullName) {
+    Namespace.prototype.use = function (fullName) {
         var nameSplitted = fullName.split(this.opt.delimiter);
         var parentModule = this.namespace;
         var currentFullName = "";

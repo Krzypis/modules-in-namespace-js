@@ -1,17 +1,11 @@
-var helpers = new window.Namespace({
+var namespace = new window.Namespace({
     delimiter: ".",
     debug: true,
-    rootName: "Helpers",
     addProperties: true
 });
 
-var tests = new window.Namespace({
-    delimiter: ".",
-    debug: true,
-    rootName: "Tests",
-    addProperties: true
-});
-
-helpers.create("Some.Awesome.Modules.Are here");
-tests.create("Better.Modules.Are there");
-helpers.create("A.B.C");
+var areHere = namespace.use("Some.Awesome.Modules.Are here");
+areHere.example = 1;
+var areThere = namespace.use("Some.Awesome.Modules.Are there");
+areThere.example = 2;
+console.log(namespace.use("Some"));
